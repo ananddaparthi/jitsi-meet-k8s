@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    k8s-app: web
+  name: web
+  namespace: jitsi
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      k8s-app: web
+  template:
+    metadata:
+      labels:
+        k8s-app: web
+    spec:
+      containers:
+        - name: web
+          ports:
+          - containerPort: 80
+          - containerPort: 443
+          image: jitsi/web
+          imagePullPolicy: Always
+          env:
+            - name: XMPP_SERVER
+              value: <give the prosody service ClusterIP>
+            - name: JICOFO_AUTH_USER
+              value: focus
+            - name: XMPP_DOMAIN
+              value: meet.jitsi
+            - name: XMPP_AUTH_DOMAIN
+              value: auth.meet.jitsi
+            - name: XMPP_INTERNAL_MUC_DOMAIN
+              value: internal-muc.meet.jitsi
+            - name: XMPP_BOSH_URL_BASE
+              value: http://<give the prosody service ClusterIP>:5280
+            - name: XMPP_MUC_DOMAIN
+              value: muc.meet.jitsi
+            - name: TZ
+              value: America/Los_Angeles
+            - name: JVB_TCP_HARVESTER_DISABLED
+              value: "true"
