@@ -29,5 +29,5 @@ Add PROSODY service ClusterIP to JICOFO, JVB and WEB deployment files and deploy
 You can use "https" service port to access jitsi.
 
 TO DO:
-Scale JVB
-Nginx ingress for web service
+`Scale JVB`
+`Nginx ingress for web service`
