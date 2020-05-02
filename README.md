@@ -18,8 +18,8 @@ Deploy the Prosody Service and notedown the ClusterIP:
 
 Add PROSODY service LoadBalancer to JICOFO, JVB and WEB deployment files and deploy rest of the services.
 
-`kubectl create -f prosody-deploy.yaml`
-`kubectl create -f prosody-service.yaml`
+`kubectl create -f jvb-deploy.yaml`
+`kubectl create -f jvb-service.yaml`
 
 `kubectl create -f jicofo-deploy.yaml`
 
@@ -28,6 +28,8 @@ Add PROSODY service LoadBalancer to JICOFO, JVB and WEB deployment files and dep
 
 You can use "https" service port to access jitsi.
 
+SCALE JVB:
+Should be able to run multiple JVBs on separate EC2 servers by pointing them to EKS Prosody service.
+
 TO DO:
-`Scale JVB`
 `Nginx ingress for web service`
