@@ -28,7 +28,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: XMPP_SERVER
-              value: <give the prosody service ClusterIP> 
+              value: <give the prosody service LoadBlanacer> 
             #- name: DOCKER_HOST_ADDRESS
             #  value: 35.161.129.72
             - name: XMPP_DOMAIN

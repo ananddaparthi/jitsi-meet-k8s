@@ -23,7 +23,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: XMPP_SERVER
-              value: <give the prosody service ClusterIP>
+              value: <give the prosody service LoadBlanacer>
             - name: XMPP_DOMAIN
               value: meet.jitsi
             - name: XMPP_AUTH_DOMAIN

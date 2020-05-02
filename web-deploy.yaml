@@ -26,7 +26,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: XMPP_SERVER
-              value: <give the prosody service ClusterIP>
+              value: <give the prosody service LoadBlanacer>
             - name: JICOFO_AUTH_USER
               value: focus
             - name: XMPP_DOMAIN
@@ -36,7 +36,7 @@ spec:
             - name: XMPP_INTERNAL_MUC_DOMAIN
               value: internal-muc.meet.jitsi
             - name: XMPP_BOSH_URL_BASE
-              value: http://<give the prosody service ClusterIP>:5280
+              value: http://<give the prosody service LoadBlanacer>:5280
             - name: XMPP_MUC_DOMAIN
               value: muc.meet.jitsi
             - name: TZ

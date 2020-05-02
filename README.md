@@ -16,7 +16,7 @@ Deploy the Prosody Service and notedown the ClusterIP:
 
 `kubectl create -f prosody-service.yaml`
 
-Add PROSODY service ClusterIP to JICOFO, JVB and WEB deployment files and deploy rest of the services.
+Add PROSODY service LoadBalancer to JICOFO, JVB and WEB deployment files and deploy rest of the services.
 
 `kubectl create -f prosody-deploy.yaml`
 `kubectl create -f prosody-service.yaml`

@@ -1,0 +1,5 @@
+v1.1.0
+Changing Prosody Service from ClusterIP to LoadBalancer, which help to use AWS EC2 machines for running multiple JVBs
+
+v1.0.0
+Initial Jitsi setup on k8s

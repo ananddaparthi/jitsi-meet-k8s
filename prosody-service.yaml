@@ -6,7 +6,7 @@ metadata:
   name: prosody
   namespace: jitsi
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   #externalTrafficPolicy: Cluster
   ports:
   - name: "5222"
