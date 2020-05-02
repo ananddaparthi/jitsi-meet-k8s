@@ -12,7 +12,7 @@ Deploy the Prosody Pod:
 
 `kubectl create -f prosody-deploy.yaml`
 
-Deploy the Prosody Service and notedown the ClusterIP:
+Deploy the Prosody Service and notedown the LoadBalancer:
 
 `kubectl create -f prosody-service.yaml`
 
